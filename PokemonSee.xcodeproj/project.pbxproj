@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		04058AEE2926DD27004970C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04058AED2926DD27004970C4 /* AppDelegate.swift */; };
 		04058AF02926DD27004970C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04058AEF2926DD27004970C4 /* SceneDelegate.swift */; };
-		04058AF22926DD27004970C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04058AF12926DD27004970C4 /* ViewController.swift */; };
+		04058AF22926DD27004970C4 /* PokemonsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04058AF12926DD27004970C4 /* PokemonsTable.swift */; };
 		04058AF52926DD27004970C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04058AF32926DD27004970C4 /* Main.storyboard */; };
 		04058AF72926DD28004970C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04058AF62926DD28004970C4 /* Assets.xcassets */; };
 		04058AFA2926DD28004970C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04058AF82926DD28004970C4 /* LaunchScreen.storyboard */; };
 		04058B052926DD29004970C4 /* PokemonSeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04058B042926DD29004970C4 /* PokemonSeeTests.swift */; };
 		04058B0F2926DD29004970C4 /* PokemonSeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04058B0E2926DD29004970C4 /* PokemonSeeUITests.swift */; };
 		04058B112926DD29004970C4 /* PokemonSeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04058B102926DD29004970C4 /* PokemonSeeUITestsLaunchTests.swift */; };
+		0409150C2926E0E700820460 /* PokemonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409150B2926E0E700820460 /* PokemonCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		04058AEA2926DD27004970C4 /* PokemonSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04058AED2926DD27004970C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04058AEF2926DD27004970C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04058AF12926DD27004970C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04058AF12926DD27004970C4 /* PokemonsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsTable.swift; sourceTree = "<group>"; };
 		04058AF42926DD27004970C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04058AF62926DD28004970C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04058AF92926DD28004970C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		04058B0A2926DD29004970C4 /* PokemonSeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonSeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04058B0E2926DD29004970C4 /* PokemonSeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSeeUITests.swift; sourceTree = "<group>"; };
 		04058B102926DD29004970C4 /* PokemonSeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0409150B2926E0E700820460 /* PokemonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +103,9 @@
 			children = (
 				04058AED2926DD27004970C4 /* AppDelegate.swift */,
 				04058AEF2926DD27004970C4 /* SceneDelegate.swift */,
-				04058AF12926DD27004970C4 /* ViewController.swift */,
-				04058AF32926DD27004970C4 /* Main.storyboard */,
+				04A449D92926E9B20096C1A9 /* Model */,
+				0409150A2926E0B600820460 /* View */,
+				0409150D2926E0EC00820460 /* Controller */,
 				04058AF62926DD28004970C4 /* Assets.xcassets */,
 				04058AF82926DD28004970C4 /* LaunchScreen.storyboard */,
 				04058AFB2926DD28004970C4 /* Info.plist */,
@@ -127,6 +130,30 @@
 			path = PokemonSeeUITests;
 			sourceTree = "<group>";
 		};
+		0409150A2926E0B600820460 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04058AF32926DD27004970C4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0409150D2926E0EC00820460 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04058AF12926DD27004970C4 /* PokemonsTable.swift */,
+				0409150B2926E0E700820460 /* PokemonCard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04A449D92926E9B20096C1A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +163,7 @@
 			buildPhases = (
 				04058AE62926DD27004970C4 /* Sources */,
 				04058AE72926DD27004970C4 /* Frameworks */,
+				04058B1D2926DDE4004970C4 /* ShellScript */,
 				04058AE82926DD27004970C4 /* Resources */,
 			);
 			buildRules = (
@@ -253,14 +281,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04058B1D2926DDE4004970C4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#   ON/OFF Script Toggle (script ON with #, script OFF without #)\n#exit 0\n\n#   App vesion / Build version constants\nsourceFilePath=\"$PROJECT_DIR/$PROJECT_NAME/Base.lproj/LaunchScreen.storyboard\"\nversionNumber=\"$MARKETING_VERSION\"\n\n#   Output version & build numbers into a label on LaunchScreen.storyboard\nsed -i .bak -e \"/userLabel=\\\"APP_VERSION\\\"/s/text=\\\"[^\\\"]*\\\"/text=\\\"$versionNumber\\\"/\" \"$sourceFilePath\"\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04058AE62926DD27004970C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04058AF22926DD27004970C4 /* ViewController.swift in Sources */,
+				04058AF22926DD27004970C4 /* PokemonsTable.swift in Sources */,
 				04058AEE2926DD27004970C4 /* AppDelegate.swift in Sources */,
 				04058AF02926DD27004970C4 /* SceneDelegate.swift in Sources */,
+				0409150C2926E0E700820460 /* PokemonCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
