@@ -17,6 +17,12 @@
 		04058B0F2926DD29004970C4 /* PokemonSeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04058B0E2926DD29004970C4 /* PokemonSeeUITests.swift */; };
 		04058B112926DD29004970C4 /* PokemonSeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04058B102926DD29004970C4 /* PokemonSeeUITestsLaunchTests.swift */; };
 		0409150C2926E0E700820460 /* PokemonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409150B2926E0E700820460 /* PokemonCard.swift */; };
+		0422D18E2927F745006C7A7C /* PokemonsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422D18D2927F745006C7A7C /* PokemonsData.swift */; };
+		0422D1902927F755006C7A7C /* PokemonsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422D18F2927F755006C7A7C /* PokemonsModel.swift */; };
+		0422D1922927F762006C7A7C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422D1912927F762006C7A7C /* NetworkManager.swift */; };
+		049B62FE292806E500258471 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 049B62FD292806E500258471 /* Alamofire */; };
+		04A2482B292ADE97000425A6 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2482A292ADE97000425A6 /* PokemonCell.swift */; };
+		4C4250C32248E862B25A1DDC /* Pods_PokemonSee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E18E47008D1FD8091AF68D1 /* Pods_PokemonSee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,13 @@
 		04058B0E2926DD29004970C4 /* PokemonSeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSeeUITests.swift; sourceTree = "<group>"; };
 		04058B102926DD29004970C4 /* PokemonSeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0409150B2926E0E700820460 /* PokemonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCard.swift; sourceTree = "<group>"; };
+		0422D18D2927F745006C7A7C /* PokemonsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsData.swift; sourceTree = "<group>"; };
+		0422D18F2927F755006C7A7C /* PokemonsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsModel.swift; sourceTree = "<group>"; };
+		0422D1912927F762006C7A7C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		04A2482A292ADE97000425A6 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		8E18E47008D1FD8091AF68D1 /* Pods_PokemonSee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonSee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8AA1B914AC1FE7BFE9A9DC2 /* Pods-PokemonSee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonSee.debug.xcconfig"; path = "Target Support Files/Pods-PokemonSee/Pods-PokemonSee.debug.xcconfig"; sourceTree = "<group>"; };
+		EDFACF0B34C99EACA7C65C19 /* Pods-PokemonSee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonSee.release.xcconfig"; path = "Target Support Files/Pods-PokemonSee/Pods-PokemonSee.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4250C32248E862B25A1DDC /* Pods_PokemonSee.framework in Frameworks */,
+				049B62FE292806E500258471 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				04058B032926DD29004970C4 /* PokemonSeeTests */,
 				04058B0D2926DD29004970C4 /* PokemonSeeUITests */,
 				04058AEB2926DD27004970C4 /* Products */,
+				70E95F7AE34300D4AACA4378 /* Pods */,
+				07CEB7EB444417A1EDE02E2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +160,7 @@
 			children = (
 				04058AF12926DD27004970C4 /* PokemonsTable.swift */,
 				0409150B2926E0E700820460 /* PokemonCard.swift */,
+				04A2482A292ADE97000425A6 /* PokemonCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,8 +168,28 @@
 		04A449D92926E9B20096C1A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0422D18D2927F745006C7A7C /* PokemonsData.swift */,
+				0422D18F2927F755006C7A7C /* PokemonsModel.swift */,
+				0422D1912927F762006C7A7C /* NetworkManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		07CEB7EB444417A1EDE02E2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E18E47008D1FD8091AF68D1 /* Pods_PokemonSee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70E95F7AE34300D4AACA4378 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8AA1B914AC1FE7BFE9A9DC2 /* Pods-PokemonSee.debug.xcconfig */,
+				EDFACF0B34C99EACA7C65C19 /* Pods-PokemonSee.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,16 +199,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04058B142926DD29004970C4 /* Build configuration list for PBXNativeTarget "PokemonSee" */;
 			buildPhases = (
+				8D53320C3726874C899A36AB /* [CP] Check Pods Manifest.lock */,
 				04058AE62926DD27004970C4 /* Sources */,
 				04058AE72926DD27004970C4 /* Frameworks */,
 				04058B1D2926DDE4004970C4 /* ShellScript */,
 				04058AE82926DD27004970C4 /* Resources */,
+				42CE01DCD2EFE105F6138808 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PokemonSee;
+			packageProductDependencies = (
+				049B62FD292806E500258471 /* Alamofire */,
+			);
 			productName = PokemonSee;
 			productReference = 04058AEA2926DD27004970C4 /* PokemonSee.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +286,9 @@
 				Base,
 			);
 			mainGroup = 04058AE12926DD27004970C4;
+			packageReferences = (
+				049B62FC292806E500258471 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 04058AEB2926DD27004970C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,6 +346,45 @@
 			shellPath = /bin/sh;
 			shellScript = "#   ON/OFF Script Toggle (script ON with #, script OFF without #)\n#exit 0\n\n#   App vesion / Build version constants\nsourceFilePath=\"$PROJECT_DIR/$PROJECT_NAME/Base.lproj/LaunchScreen.storyboard\"\nversionNumber=\"$MARKETING_VERSION\"\n\n#   Output version & build numbers into a label on LaunchScreen.storyboard\nsed -i .bak -e \"/userLabel=\\\"APP_VERSION\\\"/s/text=\\\"[^\\\"]*\\\"/text=\\\"$versionNumber\\\"/\" \"$sourceFilePath\"\n\n";
 		};
+		42CE01DCD2EFE105F6138808 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokemonSee/Pods-PokemonSee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokemonSee/Pods-PokemonSee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokemonSee/Pods-PokemonSee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D53320C3726874C899A36AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PokemonSee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -307,7 +392,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0422D18E2927F745006C7A7C /* PokemonsData.swift in Sources */,
+				04A2482B292ADE97000425A6 /* PokemonCell.swift in Sources */,
+				0422D1902927F755006C7A7C /* PokemonsModel.swift in Sources */,
 				04058AF22926DD27004970C4 /* PokemonsTable.swift in Sources */,
+				0422D1922927F762006C7A7C /* NetworkManager.swift in Sources */,
 				04058AEE2926DD27004970C4 /* AppDelegate.swift in Sources */,
 				04058AF02926DD27004970C4 /* SceneDelegate.swift in Sources */,
 				0409150C2926E0E700820460 /* PokemonCard.swift in Sources */,
@@ -482,6 +571,7 @@
 		};
 		04058B152926DD29004970C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8AA1B914AC1FE7BFE9A9DC2 /* Pods-PokemonSee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -510,6 +600,7 @@
 		};
 		04058B162926DD29004970C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDFACF0B34C99EACA7C65C19 /* Pods-PokemonSee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -652,6 +743,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		049B62FC292806E500258471 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		049B62FD292806E500258471 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 049B62FC292806E500258471 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04058AE22926DD27004970C4 /* Project object */;
 }
