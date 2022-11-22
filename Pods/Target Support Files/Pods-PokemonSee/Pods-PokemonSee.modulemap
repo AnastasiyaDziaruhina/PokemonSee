@@ -1,0 +1,6 @@
+framework module Pods_PokemonSee {
+  umbrella header "Pods-PokemonSee-umbrella.h"
+
+  export *
+  module * { export * }
+}
