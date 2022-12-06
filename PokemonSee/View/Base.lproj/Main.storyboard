@@ -49,6 +49,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="pCell" destination="MV8-jZ-XO5" id="eQn-Hc-k9l"/>
                                             <outlet property="pName" destination="fg6-6E-aI0" id="LvI-Q9-pgP"/>
                                         </connections>
                                     </tableViewCell>

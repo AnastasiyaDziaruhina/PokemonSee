@@ -15,10 +15,10 @@ protocol NetworkManagerDelegate {
 }
 
 
-class NetworkManager {
+public class NetworkManager {
     
-    let urlPL = "https://pokeapi.co/api/v2/pokemon?limit=200"
-    var delegate : NetworkManagerDelegate?
+   private let urlPL = K.apiURL
+   var delegate : NetworkManagerDelegate?
     
     
     func getPokemons(completion: @escaping (_ pokemonsModel: PokemonsModel) -> Void)  {
@@ -30,7 +30,7 @@ class NetworkManager {
                 
                 if response.error != nil {
                     //TODO: Add show error message to user
-                    print(response.error)
+                    debugPrint(response.error as Any)
                     
                 } else if let data = response.value {
                     do {
@@ -40,23 +40,24 @@ class NetworkManager {
                         
                         completion(pokemonsModel)
                     } catch let error {
-                        print(error)
+                        debugPrint(error)
                     }
                 }
                 
             }
     }
     
-    func getPokemonInfo(url: String, completion: @escaping (_ pokemonModel: PokemonModel) -> Void) {
+    func getPokemonInfo(url: String, completion: @escaping (PokemonModel) -> Void) {
         
         AF.request(url, method: .get)
             .validate()
             .validate(contentType: ["application/json"])
             .responseData { response in
-                
+
                 if response.error != nil {
                     //TODO: Add show error message to user
-                    print(response.error)
+                   
+                    debugPrint(response.error as Any)
                     
                 } else if let data = response.value {
                     do {
@@ -66,7 +67,7 @@ class NetworkManager {
                         
                         completion(pokemonModel)
                     } catch let error {
-                        print(error)
+                        debugPrint(error)
                     }
                 }
             }

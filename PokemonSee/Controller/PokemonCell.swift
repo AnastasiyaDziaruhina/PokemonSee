@@ -9,18 +9,22 @@ import UIKit
 
 class PokemonCell: UITableViewCell {
     
-    @IBOutlet weak var pIMG: UIImageView!
     @IBOutlet weak var pName: UILabel!
+    @IBOutlet weak var pCell: UIView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        let pCell = UIView()
+        pCell.backgroundColor =  .systemPurple
+        self.selectedBackgroundView = pCell
+       
     }
 
 }

@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import SwiftLoader
 
 class PokemonsTable: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -16,9 +15,9 @@ class PokemonsTable: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var pokemonsTable: UITableView!
     
     
-    var pokemonsModel: PokemonsModel = PokemonsModel()
-    var networkManager = NetworkManager()
-    var selectedPokemon : Pokemon!
+   private var pokemonsModel: PokemonsModel = PokemonsModel()
+   private var networkManager = NetworkManager()
+   private var selectedPokemon : Pokemon!
 
     
     override func viewDidLoad() {
@@ -27,6 +26,7 @@ class PokemonsTable: UIViewController, UITableViewDataSource, UITableViewDelegat
         pokemonsTable.delegate = self
         pokemonsTable.dataSource = self
         networkManager.delegate = self
+        navigationItem.title = K.appName
         
 //      Load pokemons & reload table
         networkManager.getPokemons(completion: { (data) in
@@ -47,7 +47,7 @@ class PokemonsTable: UIViewController, UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let pokemon = pokemonsModel.pokemons[indexPath.row]
-        let cell = pokemonsTable.dequeueReusableCell(withIdentifier: "pCell", for: indexPath) as! PokemonCell
+        let cell = pokemonsTable.dequeueReusableCell(withIdentifier: K.pCell, for: indexPath) as! PokemonCell
         cell.pName.text = pokemon.name
         return cell
     }
@@ -58,32 +58,15 @@ class PokemonsTable: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         let selectedPokemon = pokemonsModel.pokemons[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
-        self.performSegue(withIdentifier: "goToPokemon", sender: selectedPokemon.url)
+        self.performSegue(withIdentifier: K.pokemonSegue, sender: selectedPokemon.url)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "goToPokemon" {
+        if segue.identifier == K.pokemonSegue {
             let destinationVC = segue.destination as! PokemonCard
             destinationVC.pokemonURL = sender as! String
         }
     }
     
 }
-
-
-//MARK: - PokemonsManagerDelegate
-
-
-extension PokemonsTable: NetworkManagerDelegate {
-    
-    func didFailWithError(error: Error) {
-        print(error)
-    }
-    
-    func didUpdatePokemonCard(_ networkManager: NetworkManager, pokemonModel: PokemonModel) {
-        return
-    }
-}
-
-

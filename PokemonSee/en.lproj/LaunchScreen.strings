@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "PokemonSee"; ObjectID = "15y-Rg-sVs"; */
+"15y-Rg-sVs.text" = "PokemonSee";
+
+/* Class = "UILabel"; text = "version:"; ObjectID = "7pY-z9-GN5"; */
+"7pY-z9-GN5.text" = "version:";
+
+/* Class = "UILabel"; accessibilityLabel = "APP_VERSION"; ObjectID = "WVa-qQ-OxA"; */
+"WVa-qQ-OxA.accessibilityLabel" = "APP_VERSION";
+
+/* Class = "UILabel"; text = "1.0"; ObjectID = "WVa-qQ-OxA"; */
+"WVa-qQ-OxA.text" = "1.0";

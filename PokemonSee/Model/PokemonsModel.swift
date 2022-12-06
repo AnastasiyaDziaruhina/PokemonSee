@@ -9,18 +9,19 @@ import Foundation
 import UIKit
 
 struct PokemonsModel {
-    var next: String = ""
-    var previous: String = ""
-    var pokemons: [Pokemon] = []
+     var next: String = ""
+     var previous: String = ""
+     var pokemons: [Pokemon] = []
 }
 
 struct PokemonModel {
 
-    var id: Int?
-    var name: String = ""
-    var imageURL: String = ""
-    var height: Int?
-    var weight: Int?
-    var types: [Types] = []
+     var id: Int?
+     var name: String = ""
+     var imageURL: String = ""
+     var image: UIImage?
+     var height: Int?
+     var weight: Int?
+     var types: [Types] = []
 
 }

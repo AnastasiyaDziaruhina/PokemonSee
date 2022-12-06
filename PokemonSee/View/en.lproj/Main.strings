@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Height:"; ObjectID = "3Sk-jv-XQc"; */
+"height" = "Height";
+
+/* Class = "UILabel"; text = "Weight:"; ObjectID = "Azz-c8-xuQ"; */
+"weight" = "Weight";
+
+/* Class = "UINavigationItem"; title = "PokemonSee"; ObjectID = "ETa-D0-Dgk"; */
+"pokemonSee.title" = "PokemonSee";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "H63-vJ-jxd"; */
+"name" = "Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fg6-6E-aI0"; */
+"fg6-6E-aI0.text" = "Label";
+
+/* Class = "UILabel"; text = "Type:"; ObjectID = "lSw-ey-rl3"; */
+"type" = "Type";

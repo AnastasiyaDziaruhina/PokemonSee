@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  PokemonSee
+
+  Created by Stacy on 06/12/2022.
+  
+*/
+
+
+"height" = "Height";
+"weight" = "Weight";
+"pokemonSee.title" = "PokemonSee";
+"name" = "Name";
+"type" = "Type";

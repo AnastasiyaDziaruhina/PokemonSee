@@ -17,9 +17,9 @@ class PokemonCard: UIViewController {
     @IBOutlet weak var pWeight: UILabel!
     @IBOutlet weak var pHeight: UILabel!
     
-    var pokemonModel: PokemonModel = PokemonModel()
-    var networkManager = NetworkManager()
-    var pokemonURL: String = ""
+    private var pokemonModel: PokemonModel = PokemonModel()
+    private var networkManager = NetworkManager()
+    public var pokemonURL = K.pokemonURL
     
     override func viewDidLoad() {
         
@@ -28,47 +28,30 @@ class PokemonCard: UIViewController {
         
     }
     
-    @objc func loadPokemon() {
+    @objc private func loadPokemon() {
         
         networkManager.getPokemonInfo(url: self.pokemonURL, completion: { [self] (data) in
             self.pokemonModel = data
             
-            pName.text = "Name: \(pokemonModel.name)"
-            pType.text = "Type: \(pokemonModel.types.map{$0.type.name}.formatted())"
-            pHeight.text = pokemonModel.height?.stringHeight
-            pWeight.text = pokemonModel.weight?.stringWeight
+            //NSLocalizedString("", comment: "")
+             
+            pName.text = "\(NSLocalizedString("name", comment: "")): \(pokemonModel.name)"
+            pType.text = "\(NSLocalizedString("type", comment: "")): \(pokemonModel.types.map{$0.type.name}.formatted())"
+            pWeight.text = "\(NSLocalizedString("weight", comment: "")): \(pokemonModel.weight?.stringWeight ?? "" )"
+            pHeight.text = "\(NSLocalizedString("height", comment: "")): \(pokemonModel.height?.stringHeight ?? "" )"
             
-            DispatchQueue.main.async {
-                let url = NSURL(string: self.pokemonModel.imageURL)
-                let imagedata = NSData.init(contentsOf: url! as URL)
-                if imagedata != nil {
-                    self.pokemonIMG.image = UIImage(data: imagedata! as Data)
-                }
+            if let url = NSURL(string: self.pokemonModel.imageURL) {
+                URLSession.shared.dataTask(with: url as URL) { (data, response, error) in
+                    // Error handling...
+                    guard let imageData = data else { return }
+                    DispatchQueue.main.async {
+                        let image = UIImage(data: imageData)
+                        self.pokemonIMG.image = UIImage(data: imageData)
+                    }
+                }.resume()
             }
         })
     }
-}
-
-
-//MARK: - Extensions
-
-extension Int {
-    var stringHeight: String {
-        return "Height: \(self)"
-    }
-    var stringWeight: String {
-        return "Weight: \(self)"
-    }
-}
-
-//MARK: - PokemonsManagerDelegate
-
-
-extension PokemonCard: NetworkManagerDelegate {
     
-    func didFailWithError(error: Error) {
-        print(error)
-    }
 }
-
 

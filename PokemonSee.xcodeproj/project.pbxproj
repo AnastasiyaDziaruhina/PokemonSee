@@ -20,8 +20,10 @@
 		0422D18E2927F745006C7A7C /* PokemonsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422D18D2927F745006C7A7C /* PokemonsData.swift */; };
 		0422D1902927F755006C7A7C /* PokemonsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422D18F2927F755006C7A7C /* PokemonsModel.swift */; };
 		0422D1922927F762006C7A7C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422D1912927F762006C7A7C /* NetworkManager.swift */; };
-		049B62FE292806E500258471 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 049B62FD292806E500258471 /* Alamofire */; };
+		0425F1A5293FC7DB00DE83D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0425F1A7293FC7DB00DE83D0 /* Localizable.strings */; };
 		04A2482B292ADE97000425A6 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2482A292ADE97000425A6 /* PokemonCell.swift */; };
+		04A397572938D60C006E0BF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A397562938D60C006E0BF2 /* Constants.swift */; };
+		04A397592938D61A006E0BF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A397582938D61A006E0BF2 /* Extensions.swift */; };
 		4C4250C32248E862B25A1DDC /* Pods_PokemonSee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E18E47008D1FD8091AF68D1 /* Pods_PokemonSee.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +62,12 @@
 		0422D18D2927F745006C7A7C /* PokemonsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsData.swift; sourceTree = "<group>"; };
 		0422D18F2927F755006C7A7C /* PokemonsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsModel.swift; sourceTree = "<group>"; };
 		0422D1912927F762006C7A7C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0425F1A2293FC32100DE83D0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0425F1A6293FC7DB00DE83D0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0425F1A8293FC7E100DE83D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04A2482A292ADE97000425A6 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		04A397562938D60C006E0BF2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04A397582938D61A006E0BF2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8E18E47008D1FD8091AF68D1 /* Pods_PokemonSee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonSee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8AA1B914AC1FE7BFE9A9DC2 /* Pods-PokemonSee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonSee.debug.xcconfig"; path = "Target Support Files/Pods-PokemonSee/Pods-PokemonSee.debug.xcconfig"; sourceTree = "<group>"; };
 		EDFACF0B34C99EACA7C65C19 /* Pods-PokemonSee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonSee.release.xcconfig"; path = "Target Support Files/Pods-PokemonSee/Pods-PokemonSee.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,7 +79,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4250C32248E862B25A1DDC /* Pods_PokemonSee.framework in Frameworks */,
-				049B62FE292806E500258471 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,11 +127,14 @@
 				04058AED2926DD27004970C4 /* AppDelegate.swift */,
 				04058AEF2926DD27004970C4 /* SceneDelegate.swift */,
 				04A449D92926E9B20096C1A9 /* Model */,
+				04A397522938D140006E0BF2 /* ViewModel */,
 				0409150A2926E0B600820460 /* View */,
 				0409150D2926E0EC00820460 /* Controller */,
+				04A397552938D5ED006E0BF2 /* Utils */,
 				04058AF62926DD28004970C4 /* Assets.xcassets */,
 				04058AF82926DD28004970C4 /* LaunchScreen.storyboard */,
 				04058AFB2926DD28004970C4 /* Info.plist */,
+				0425F1A7293FC7DB00DE83D0 /* Localizable.strings */,
 			);
 			path = PokemonSee;
 			sourceTree = "<group>";
@@ -163,6 +172,22 @@
 				04A2482A292ADE97000425A6 /* PokemonCell.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		04A397522938D140006E0BF2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04A397552938D5ED006E0BF2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04A397562938D60C006E0BF2 /* Constants.swift */,
+				04A397582938D61A006E0BF2 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		04A449D92926E9B20096C1A9 /* Model */ = {
@@ -212,7 +237,6 @@
 			);
 			name = PokemonSee;
 			packageProductDependencies = (
-				049B62FD292806E500258471 /* Alamofire */,
 			);
 			productName = PokemonSee;
 			productReference = 04058AEA2926DD27004970C4 /* PokemonSee.app */;
@@ -284,10 +308,10 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 04058AE12926DD27004970C4;
 			packageReferences = (
-				049B62FC292806E500258471 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 04058AEB2926DD27004970C4 /* Products */;
 			projectDirPath = "";
@@ -306,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04058AFA2926DD28004970C4 /* LaunchScreen.storyboard in Resources */,
+				0425F1A5293FC7DB00DE83D0 /* Localizable.strings in Resources */,
 				04058AF72926DD28004970C4 /* Assets.xcassets in Resources */,
 				04058AF52926DD27004970C4 /* Main.storyboard in Resources */,
 			);
@@ -397,8 +422,10 @@
 				0422D1902927F755006C7A7C /* PokemonsModel.swift in Sources */,
 				04058AF22926DD27004970C4 /* PokemonsTable.swift in Sources */,
 				0422D1922927F762006C7A7C /* NetworkManager.swift in Sources */,
+				04A397572938D60C006E0BF2 /* Constants.swift in Sources */,
 				04058AEE2926DD27004970C4 /* AppDelegate.swift in Sources */,
 				04058AF02926DD27004970C4 /* SceneDelegate.swift in Sources */,
+				04A397592938D61A006E0BF2 /* Extensions.swift in Sources */,
 				0409150C2926E0E700820460 /* PokemonCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,8 +475,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				04058AF92926DD28004970C4 /* Base */,
+				0425F1A2293FC32100DE83D0 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0425F1A7293FC7DB00DE83D0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0425F1A6293FC7DB00DE83D0 /* ru */,
+				0425F1A8293FC7E100DE83D0 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -459,6 +496,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -519,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -743,25 +782,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		049B62FC292806E500258471 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		049B62FD292806E500258471 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 049B62FC292806E500258471 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04058AE22926DD27004970C4 /* Project object */;
 }
